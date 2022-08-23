@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">News App</string>
+    <string name="home">Home</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="news_app">NEWS APP</string>
+    <string name="back">Back</string>
+</resources>

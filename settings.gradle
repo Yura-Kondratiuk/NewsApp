@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven {
+            url "https://maven.google.com"
+        }
+        mavenCentral()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        maven {
+            url "https://maven.google.com"
+        }
+        mavenCentral()
+//        maven { url 'https://jitpack.io' }
+    }
+}
+rootProject.name = "News App"
+include ':app'

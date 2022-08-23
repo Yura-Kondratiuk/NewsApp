@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/rootFragment">
+
+    <fragment
+        android:id="@+id/rootFragment"
+        android:name="com.example.newsapp.presentation.fragments.RootFragment"
+        android:label="RootFragment" />
+
+    <fragment
+        android:id="@+id/bookmarkFragment"
+        android:name="com.example.newsapp.presentation.fragments.BookmarkFragment"
+        android:label="BookmarkFragment">
+
+        <action
+            android:id="@+id/action_bookmarkFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.example.newsapp.presentation.fragments.NewsFragment"
+        android:label="NewsFragment">
+        <action
+            android:id="@+id/action_newsFragment_to_bookmarkFragment"
+            app:destination="@id/bookmarkFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.example.newsapp.presentation.fragments.WebViewFragment"
+        android:label="WebViewFragment">
+        <argument
+            android:name="webShare"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_to_webViewFragment"
+        app:destination="@id/webViewFragment" />
+
+</navigation>
